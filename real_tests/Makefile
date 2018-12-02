@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:01:47 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 21:48:51 by pscott           ###   ########.fr        #
+#    Updated: 2018/12/02 22:32:47 by pscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,16 +35,14 @@ OBJS= $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) makes
-	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
-
-makes:
+$(NAME): $(OBJS)
 	@make -C $(LIB_UNIT_DIR)
 	@make -C $(LIB_TEST_DIR)
+	gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
 
 test: $(NAME)
-	gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
-	./$(NAME) || true
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
+	@./$(NAME)
 
 %.o: %.c
 	gcc $(FLAGS) $(INCLUDES) -o $@ -c $<
