@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putchar.h                                          :+:      :+:    :+:   */
+/*   putnbr.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:09:52 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 19:07:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2018/12/02 20:14:52 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUTCHAR_H
-# define PUTCHAR_H
+#ifndef PUTNBR_H
+# define PUTNBR_H
 
-int putchar_basic(void);
-int putchar_null(void);
+int putnbr_basic(void);
+int putnbr_zero(void);
+int putnbr_negv(void);
+int putnbr_empty(void);
+int putnbr_overflow(void);
 
 #endif

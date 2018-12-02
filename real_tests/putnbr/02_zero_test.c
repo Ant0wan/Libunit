@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putchar.h                                          :+:      :+:    :+:   */
+/*   01_zero_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/02 18:09:52 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 19:07:28 by abarthel         ###   ########.fr       */
+/*   Created: 2018/12/02 18:12:52 by abarthel          #+#    #+#             */
+/*   Updated: 2018/12/02 20:05:50 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUTCHAR_H
-# define PUTCHAR_H
+#include "libft.h"
+#include "libunit.h"
 
-int putchar_basic(void);
-int putchar_null(void);
-
-#endif
+int	putnbr_zero(void)
+{
+	if (!(void_itoa_test(2, &ft_putnbr, 0, "0")))
+		return (0);
+	else
+		return (-1);
+}
