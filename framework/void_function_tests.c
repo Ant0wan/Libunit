@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 18:21:29 by abarthel         ###   ########.fr       */
+/*   Updated: 2018/12/02 20:52:11 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		void_char_test(int len, void (*f)(char), char input)
 	}
 }
 
-int		void_str_test(int len, void (*f)(char*), char *input)
+int		void_str_test(int len, void (*f)(const char*), char *input)
 {
 	char	buffer[len + 1];
 	int		stat;
