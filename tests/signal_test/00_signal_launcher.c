@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:43:48 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 17:57:39 by pscott           ###   ########.fr       */
+/*   Updated: 2018/12/02 18:39:42 by pscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	signal_launcher(t_err_info *info)
 	load_test(&signal_asksegv_test, &testlist, "ask_segv", 11);
 	load_test(&signal_askbus_test, &testlist, "ask_buse", 10);
 	load_test(&signal_askwrong_test, &testlist, "ask_wrong", 1);
-	/* ask timeout ? */
+	load_test(&signal_asktimeout_test, &testlist, "ask_timeout", 14);
 	return (launch_test(&testlist, info));
 }
