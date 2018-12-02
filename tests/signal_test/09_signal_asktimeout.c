@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   launchers.h                                        :+:      :+:    :+:   */
+/*   09_signal_asktimeout.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 19:23:44 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 18:36:28 by pscott           ###   ########.fr       */
+/*   Created: 2018/12/02 18:40:13 by pscott            #+#    #+#             */
+/*   Updated: 2018/12/02 18:40:39 by pscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LAUNCHERS_H
-# define LAUNCHERS_H
-# include "libunit.h"
+#include "libunit.h"
 
-void	putchar_launcher(t_err_info *info);
-void	strjoin_launcher(t_err_info *info);
-void	strlen_launcher(t_err_info *info);
-#endif
+int	signal_asktimeout_test(void)
+{
+	while (42)
+	{
+	}
+	if ((1))
+		return (0);
+	else
+		return (-1);
+}
