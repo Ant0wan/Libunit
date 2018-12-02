@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 20:53:25 by abarthel         ###   ########.fr       */
+/*   Updated: 2018/12/02 21:15:06 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ int						print_usage(void);
 void					print_score(int a, int b);
 void					init_info(t_err_info *info);
 int						void_char_test(int len, void (*f)(char), char input);
-int						void_str_test(int len, void (*f)(const char*), char *input);
+int						void_str_test(int len, void (*f)(const char*),
+		char *input);
 int						void_itoa_test(int len, void (*f)(int), int input, \
 		char *output);
 void					print_test(char *name);
