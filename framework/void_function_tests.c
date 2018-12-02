@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 13:54:00 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 17:55:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2018/12/02 18:21:29 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		void_char_test(int len, void (*f)(char), char input)
 		close(1);
 		dup2(fd[1], 1);
 		f(input);
+		return (0);
 	}
 	else
 	{
@@ -52,12 +53,13 @@ int		void_str_test(int len, void (*f)(char*), char *input)
 		close(1);
 		dup2(fd[1], 1);
 		f(input);
+		return (0);
 	}
 	else
 	{
 		wait(&stat);
 		read(fd[0], buffer, len);
-		if (!(strncmp(buffer, input, len)))
+		if (!(fw_strncmp(buffer, input, len)))
 			return (0);
 		else
 			return (-1);
@@ -78,6 +80,7 @@ int		void_itoa_test(int len, void (*f)(int), int input, char *output)
 		close(1);
 		dup2(fd[1], 1);
 		f(input);
+		return (0);
 	}
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 18:01:35 by pscott           ###   ########.fr       */
+/*   Updated: 2018/12/02 18:22:24 by pscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,22 @@ void		print_result(int stat, int expected)
 		fw_putendl("Error from our side.");
 	else if (stat == 14)
 		fw_putendl("\033[31m[TIMEOUT]\033[0m");
-	else 
+	else
 		fw_putendl("Exit not caught.");
 }
 
-void	print_score(int err, int total)
+void		print_score(int err, int total)
 {
 	fw_putstr("\nScore: ");
 	fw_putnbr(total - err);
 	fw_putchar('/');
 	fw_putnbr(total);
 	fw_putstr(" valid tests.\n");
+}
+
+void		print_test(char *name)
+{
+	fw_putstr("\t> ");
+	fw_putstr(name);
+	fw_putstr("\t:\t");
 }
