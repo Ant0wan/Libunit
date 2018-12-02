@@ -1,0 +1,21 @@
+version: 2
+jobs:
+    shellcheck:
+        docker:
+            - image: nlknguyen/alpine-shellcheck:v0.4.6
+        working_directory: ~/.
+        steps:
+            - checkout
+            - run:
+                name: Check Scripts
+                command: |
+                    ! (grep -r "stdio" framework ||  grep -r "printf" framework || grep -r "////" framework)
+                    ! (grep -r "stdio" real_tests ||  grep -r "printf" real_tests || grep -r "////" real_tests)
+                    ! (grep -r "stdio" tests ||  grep -r "printf" tests || grep -r "////" tests)
+                    ! (grep -r "stdio" rendu ||  grep -r "printf" rendu || grep -r "////" rendu)
+
+workflows:
+    version: 2
+    workflow:
+        jobs:
+            - shellcheck
