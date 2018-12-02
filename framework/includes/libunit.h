@@ -6,14 +6,13 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 18:25:01 by pscott           ###   ########.fr       */
+/*   Updated: 2018/12/02 18:45:48 by pscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBUNIT_H
 # define LIBUNIT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
