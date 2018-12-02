@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:01:47 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 18:01:49 by pscott           ###   ########.fr        #
+#    Updated: 2018/12/02 21:48:51 by pscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ OBJS= $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) makes
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
 
 makes:
 	@make -C $(LIB_UNIT_DIR)
@@ -44,16 +45,6 @@ makes:
 test: $(NAME)
 	gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
 	./$(NAME) || true
-
-f: $(NAME)
-	gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS) -fsanitize=address -g3
-	./$(NAME)
-	rm -rf $(NAME).dSYM
-
-v: $(NAME)
-	gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) $(LIB_TEST) -o $(NAME) $(OBJS)
-	valgrind --leak-check=yes ./$(NAME)
-	rm -rf $(NAME).dSYM
 
 %.o: %.c
 	gcc $(FLAGS) $(INCLUDES) -o $@ -c $<

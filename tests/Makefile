@@ -6,7 +6,7 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 18:02:04 by pscott           ###   ########.fr        #
+#    Updated: 2018/12/02 21:50:36 by pscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ OBJS= $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) makes
+	@gcc $(FLAGS) $(INCLUDES) $(LIB_UNIT) $(LIB_FW) -o $(NAME) $(OBJS)
 
 makes:
 	@make -C $(LIB_UNIT_DIR)
