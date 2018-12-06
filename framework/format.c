@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:28:19 by abarthel          #+#    #+#             */
-/*   Updated: 2018/12/02 18:49:47 by pscott           ###   ########.fr       */
+/*   Updated: 2018/12/06 10:47:45 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ void		print_header(void)
 	fw_putendl("");
 	fw_putstr("\033[0m     version: \033[36mv0.1");
 	fw_putstr("\033[0m     authors: \033[36mabarthel\033[0m, ");
-	fw_putstr("\033[36mpscott\033[0m");
+	fw_putstr("\033[36mpscott\033[0m, ");
+	fw_putstr("\033[36malesteph\033[0m");
 	fw_putendl("");
 	fw_putendl("");
 }
