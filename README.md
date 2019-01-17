@@ -130,4 +130,4 @@ make -C [tests_directory] test
 
 ### Demo
 
-[![Libunitdemo](https://i.imgur.com/4IV7ijk.gifv)](i.imgur.com/4IV7ijk.gifv)
+[![Libunitdemo](https://i.imgur.com/4IV7ijk.gif)](i.imgur.com/4IV7ijk.gif)
