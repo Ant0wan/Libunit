@@ -57,3 +57,22 @@ Screenshot:
 
 [![Libunitscreenshot](https://i.imgur.com/h67sm9Z.png)](i.imgur.com/h67sm9Z.png)
 
+### Test routines
+
+The testing routines follow the specifications below:
+
+- each routine must be placed in a folder tests/[function_to_test]
+
+- each test is encapsulated in a function which follows the prototype:
+
+```C=
+int test_function(void)
+{
+	if (/* test succeed */)
+		return (0);
+	else
+		return (-1);
+}
+```
+
+
