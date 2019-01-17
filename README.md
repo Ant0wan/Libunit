@@ -92,3 +92,12 @@ Example:
 
 - file with a name starting by ```00_xxx``` will always be considered as the "Launcher"
 
+- the main containing the tests is located in the root folder
+
+- the main calls all the Launchers
+
+- the Makefile associated with the program contains an additional dependency called ```test```
+
+- the ```test``` dependency compiles the program with the test files and run its binary file
+
+
