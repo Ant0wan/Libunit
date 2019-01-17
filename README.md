@@ -100,4 +100,34 @@ Example:
 
 - the ```test``` dependency compiles the program with the test files and run its binary file
 
+- the source code of the micro-framework in located in the folder named "framework"
 
+- each routine has its own makefile including ```test``` dependency
+
+---
+
+## Usage
+
+- Clone repository
+
+```shell=
+git clone https://github.com/Ant0wan/Libunit.git
+```
+
+- Copy your work in the "rendu" repository
+
+```shell=
+cp -f [mywork_repository] Libunit/rendu/
+```
+
+- Compile and Run tests
+
+```shell=
+make -C [tests_directory] test
+```
+
+- Check output !
+
+### Demo
+
+[![Libunitdemo](https://i.imgur.com/4IV7ijk.gifv)](i.imgur.com/4IV7ijk.gifv)
