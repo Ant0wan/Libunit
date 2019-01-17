@@ -34,7 +34,7 @@ and the macros (#define) from libraries:
 
 ### The Micro-framework
 
-At the end of the tests execution, the name of the tested function is written as well as the name of each test with its corresponding results (stdout).
+- At the end of the tests execution, the name of the tested function is written as well as the name of each test with its corresponding results (stdout).
 
 It follows the format:
 
@@ -45,10 +45,15 @@ It follows the format:
 | **SEGV** | Segmentation Fault detected |
 | **BUSE** | Bus Error detected |
 
-Output sample:
+- The total number of tests and the count of succeeded tests are displayed.
 
+- In the case of a success, the routine exists returning zero (0).
 
-The total number of tests and the count of succeeded tests are displayed.
-In the case of a success, the routine exists returning zero (0).
-If at least one of the tests fails, the routine returns minus one (-1).
-Only the result of each test are written on the standard output.
+- If any of the tests fails, the routine returns minus one (-1).
+
+- Only the result of each test is displayed.
+
+Screenshot:
+
+[![Libunitscreenshot](https://i.imgur.com/h67sm9Z.png)](i.imgur.com/h67sm9Z.png)
+
