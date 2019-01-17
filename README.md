@@ -75,4 +75,20 @@ int test_function(void)
 }
 ```
 
+- tests does not write on standard output
+
+- for each function, the corresponding tests are grouped in the same folder, with a specific source file called "Launcher"
+
+- the Launcher is used to load and run all the test to the choosen function
+
+- only one function per file
+
+- each name of test file begins with a number followed by an underscore. It defines the run order 
+
+Example:
+```shell=
+04_basic_test_four_a.c
+```
+
+- file with a name starting by ```00_xxx``` will always be considered as the "Launcher"
 
