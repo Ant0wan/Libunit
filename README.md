@@ -12,14 +12,38 @@ The framework is able to execute series of tests on C functions - one after the 
 - Each process is closed at the end of the test and gives the hand back to the parent process.
 - It catches the result of the child process and the type of interruption if it crashes (e.g. SegFault or BusError).
 
+The compiled library is named libunit.a
+
+The project contains a makefile with usual rules (make, clean, fclean, re).
+
+It contains the authorized functions:
+```shell=
+malloc
+free
+exit
+fork
+wait
+write
+```
+
+and the macros (#define) from libraries:
+```shell=
+<sys/wait.h>
+<signal.h>
+```
+
+### The Micro-framework
+
 At the end of the tests execution, the name of the tested function is written as well as the name of each test with its corresponding results (stdout).
 
 It follows the format:
 
-* OK   : Test succeeded.
-* KO   : Test failed.
-* SEGV : Segmentation Fault detected.
-* BUSE : Bus Error detected.
+| Signal | Description |
+| --- | --- |
+| **OK** | Test succeeded |
+| **KO** | Test failed |
+| **SEGV** | Segmentation Fault detected |
+| **BUSE** | Bus Error detected |
 
 Output sample:
 
